@@ -5,7 +5,7 @@ from tkinter import messagebox
 class Phonenumber:
     def __init__(self):
         self.form = Tk()
-        self.phone_number()
+        self.second_ui()
         self.form.mainloop()
         
         
@@ -20,9 +20,8 @@ class Phonenumber:
                 
     def second_ui(self):
         number=StringVar()
-        phone_entry = Entry(self,form,textvariable=number).place(x=35,y=10)
-        
-        save_btn = Button(self,form,text="save phone",command=lambda:self.save(number.get())).place(x=50,y=40)
+        phone_entry = Entry(self.form,textvariable=number).place(x=40,y=10)
+        save_btn = Button(self.form,text="save phone",command=lambda:self.save(number.get())).place(x=70,y=40)
         
 numbers = Phonenumber()
         
